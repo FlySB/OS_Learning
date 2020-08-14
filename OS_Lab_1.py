@@ -459,7 +459,10 @@ class OS(object):
 
         # 切换进程
         self.Scheduler()
-        print("process ",self.Run.PID," is running.","process ",RUN_PID," is ready.")
+        if(self.Run.PID == RUN_PID):
+            print("process ",self.Run.PID," is running.")
+        else:
+            print("process ",self.Run.PID," is running.","process ",RUN_PID," is ready.")
 
 # 读取指令并运行
 OS = OS()
